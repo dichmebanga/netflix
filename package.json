@@ -30,6 +30,7 @@
     "@trpc/server": "^10.21.1",
     "@vercel/analytics": "^1.0.1",
     "@vercel/og": "^0.5.3",
+    "axios": "^1.6.2",
     "class-variance-authority": "^0.6.0",
     "clsx": "^1.2.1",
     "csstype": "^3.1.2",

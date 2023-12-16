@@ -1,5 +1,6 @@
 import type { CategorizedShows } from "@/types"
 
+import { getDataFilmMoiCapNhap } from "@/lib/fetcherDataFilm"
 import { getShows } from "@/lib/fetchers"
 import { getCurrentUser } from "@/lib/session"
 import Hero from "@/components/hero"
@@ -7,8 +8,10 @@ import ShowsContainer from "@/components/shows-container"
 
 export default async function Home() {
   const user = await getCurrentUser()
-
   const allShows = await getShows("movie")
+
+  const dataFilmMoiCapNhap = await getDataFilmMoiCapNhap(1)
+  console.log("dataFilmMoiCapNhapdataFilmMoiCapNhap", dataFilmMoiCapNhap)
 
   const allShowsByCategory: CategorizedShows[] = [
     {
